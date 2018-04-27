@@ -1,0 +1,14 @@
+.root{
+    -fx-color: white
+}
+AnchorPane{    
+    -fx-background-color: blue;
+}
+
+.botao {
+    -fx-border-color: green
+}
+
+label {
+    -fx-background-color: #11FF22
+}

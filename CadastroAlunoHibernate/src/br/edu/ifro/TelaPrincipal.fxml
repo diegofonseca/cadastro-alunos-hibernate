@@ -5,10 +5,29 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.TelaPrincipalController">
+<?import javafx.scene.control.cell.* ?>
+<AnchorPane id="AnchorPane" prefHeight="253.0" prefWidth="482.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.TelaPrincipalController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+        <Button fx:id="btnMensagem" layoutX="94.0" layoutY="160.0" onAction="#exibir" text="Click Me!" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField fx:id="txt1" layoutX="14.0" layoutY="33.0" />
+      <TextField fx:id="txt2" layoutX="14.0" layoutY="75.0" />
+      <TextField fx:id="txt3" layoutX="26.0" layoutY="125.0" />
+      <TableView fx:id="tbAlunos" layoutX="212.0" layoutY="20.0" prefHeight="200.0" 
+                 prefWidth="233.0">
+        <columns>            
+          <TableColumn prefWidth="75.0" text="ID">
+              <cellValueFactory>
+                  <PropertyValueFactory property="id"  /> 
+              </cellValueFactory>
+          </TableColumn>  
+          <TableColumn prefWidth="75.0" text="NOME">
+              <cellValueFactory><PropertyValueFactory property="nome"  /> </cellValueFactory>
+          </TableColumn>  
+          <TableColumn prefWidth="75.0" text="IDADE">
+              <cellValueFactory><PropertyValueFactory property="idade"  /> </cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
     </children>
 </AnchorPane>
